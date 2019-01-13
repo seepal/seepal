@@ -11,6 +11,11 @@ import UIKit
 class DocumentView: UIScrollView {
     weak var doc:Document!
     var containView = UIView()
+    var containBounds:CGRect {
+        get {
+            return self.bounds.applying(self.containView.transform.inverted())
+        }
+    }
     
     init(_ doc: Document, _ superView:UIView) {
         super.init(frame: superView.bounds)
@@ -63,7 +68,7 @@ class DocumentView: UIScrollView {
     }
     
     func currentPages() -> [Page]? {
-        let b = bounds 
+        let b = containBounds
         var pages:[Page]?
         for page in doc.pages {
             if b.intersects(page.frame) {
@@ -103,10 +108,8 @@ class DocumentView: UIScrollView {
     func center() {
         let w = self.frame.size.width
         let h = self.frame.size.height
-        var size = self.containView.frame.size
-        size.width /= zoomScale
-        size.height /= zoomScale
-        
+        let size = self.containView.frame.size
+
         if doc.isHorizontalScroll {
             let edge = (h-size.height)/2.0
             let insets = UIEdgeInsets(top: edge, left: 0, bottom: edge, right: 0)
@@ -116,6 +119,7 @@ class DocumentView: UIScrollView {
             let insets = UIEdgeInsets(top: 0, left: edge, bottom: 0, right: edge)
             contentInset = insets
         }
+//        print(size)
     }
 }
 
