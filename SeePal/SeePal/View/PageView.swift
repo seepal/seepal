@@ -31,6 +31,17 @@ class PageView: UIImageViewAligned {
         // Drawing code
     }
     */
+    
+    func reuse(_ page:Page, _ superView:UIView) {
+        if superview != nil {
+            return
+        }
+        self.frame = page.frame
+        self.page = page
+        self.tag = page.no
+        
+        superView.addSubview(self)
+    }
 
     private var importing = false
     
@@ -55,7 +66,7 @@ class PageView: UIImageViewAligned {
                     let b = sv.bounds.applying(cv.transform.inverted())
                     if b.intersects(self.frame) {
                         self.image = img
-                        print("set image = %x", img as Any)
+                        print("set image \(img as Any)")
                     } else {
                         self.image = nil
                         print("clear image by display")

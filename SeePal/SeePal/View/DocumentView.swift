@@ -16,6 +16,7 @@ class DocumentView: UIScrollView {
             return self.bounds.applying(self.containView.transform.inverted())
         }
     }
+    var dequeueReusablePageView:[PageView] = []
     
     init(_ doc: Document, _ superView:UIView) {
         super.init(frame: superView.bounds)
@@ -96,13 +97,36 @@ class DocumentView: UIScrollView {
             return ps.count > 0
         })
 
+        let minpno = pages.first?.no ?? 0
+        let maxpno = pages.last?.no ?? 0
+        if minpno != 0 && maxpno != 0 {
+            let rpvs = containView.subviews.filter({ (v) -> Bool in
+                let pv = v as! PageView
+                return pv.page.no < minpno || pv.page.no > maxpno
+            })
+            for v in rpvs {
+                v.removeFromSuperview()
+                let pv = v as! PageView
+                pv.image = nil
+                dequeueReusablePageView.append(pv)
+                print("to reuse dequeue \(v)")
+            }
+        }
+
         for page in pages {
             var pv = pvs.filter({ (v) -> Bool in
                 return v.tag == page.no
             }).last as? PageView
             
             if pv == nil {
-                pv = PageView(page, containView)
+                pv = dequeueReusablePageView.popLast()
+                if pv == nil {
+                    pv = PageView(page, containView)
+                    print("create PageView \(pv!)")
+                } else {
+                    pv?.reuse(page, containView)
+                    print("reuse PageView \(pv!)")
+                }
             }
             pv?.display()
         }
