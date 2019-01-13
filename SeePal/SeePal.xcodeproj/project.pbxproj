@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1D4C1821D890BC009F1E53 /* Pods_SeePal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1D4C1721D890BC009F1E53 /* Pods_SeePal.framework */; };
 		2B5BC80521CB8245007C34DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5BC80421CB8245007C34DF /* AppDelegate.swift */; };
 		2B5BC80721CB8245007C34DF /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5BC80621CB8245007C34DF /* DocumentBrowserViewController.swift */; };
 		2B5BC80921CB8245007C34DF /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5BC80821CB8245007C34DF /* DocumentViewController.swift */; };
-		2B5BC80B21CB8245007C34DF /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5BC80A21CB8245007C34DF /* Document.swift */; };
 		2B5BC80E21CB8245007C34DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5BC80C21CB8245007C34DF /* Main.storyboard */; };
 		2B5BC81021CB8246007C34DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5BC80F21CB8246007C34DF /* Assets.xcassets */; };
 		2B5BC81321CB8246007C34DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5BC81121CB8246007C34DF /* LaunchScreen.storyboard */; };
 		2B5BC81E21CB8246007C34DF /* SeePalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5BC81D21CB8246007C34DF /* SeePalTests.swift */; };
 		2B5BC82921CB8246007C34DF /* SeePalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5BC82821CB8246007C34DF /* SeePalUITests.swift */; };
+		2B5BC83F21CCA94D007C34DF /* DocumentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5BC83E21CCA94D007C34DF /* DocumentFactory.swift */; };
+		2B98965721E9E6EE0051C2DD /* CompressedDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98965621E9E6EE0051C2DD /* CompressedDocument.swift */; };
+		2B98965821E9E8520051C2DD /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5BC80A21CB8245007C34DF /* Document.swift */; };
+		2B98965C21E9F1140051C2DD /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98965B21E9F1140051C2DD /* Page.swift */; };
+		2B98965F21EA14870051C2DD /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98965E21EA14870051C2DD /* DocumentView.swift */; };
+		2B98966121EA1BC90051C2DD /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98966021EA1BC90051C2DD /* PageView.swift */; };
+		2B98966321EA2CBF0051C2DD /* PageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98966221EA2CBF0051C2DD /* PageData.swift */; };
+		2B98966621EB42110051C2DD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98966521EB42110051C2DD /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B1D4C1721D890BC009F1E53 /* Pods_SeePal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_SeePal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B1D4C1921D892AB009F1E53 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2B5BC80121CB8245007C34DF /* SeePal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeePal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5BC80421CB8245007C34DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B5BC80621CB8245007C34DF /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +61,15 @@
 		2B5BC82421CB8246007C34DF /* SeePalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeePalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5BC82821CB8246007C34DF /* SeePalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeePalUITests.swift; sourceTree = "<group>"; };
 		2B5BC82A21CB8246007C34DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B5BC83E21CCA94D007C34DF /* DocumentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentFactory.swift; sourceTree = "<group>"; };
+		2B98965621E9E6EE0051C2DD /* CompressedDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressedDocument.swift; sourceTree = "<group>"; };
+		2B98965B21E9F1140051C2DD /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		2B98965E21EA14870051C2DD /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		2B98966021EA1BC90051C2DD /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		2B98966221EA2CBF0051C2DD /* PageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageData.swift; sourceTree = "<group>"; };
+		2B98966521EB42110051C2DD /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8E941D7B0C2EA41A3F85BC9C /* Pods-SeePal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeePal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeePal/Pods-SeePal.debug.xcconfig"; sourceTree = "<group>"; };
+		B6DC151563F1F8A1C1310B62 /* Pods-SeePal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeePal.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeePal/Pods-SeePal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1D4C1821D890BC009F1E53 /* Pods_SeePal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +98,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B1D4C1A21D89348009F1E53 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		2B5BC7F821CB8245007C34DF = {
 			isa = PBXGroup;
 			children = (
+				2B1D4C1921D892AB009F1E53 /* Podfile */,
 				2B5BC80321CB8245007C34DF /* SeePal */,
 				2B5BC81C21CB8246007C34DF /* SeePalTests */,
 				2B5BC82721CB8246007C34DF /* SeePalUITests */,
 				2B5BC80221CB8245007C34DF /* Products */,
+				E10172AECC1D797BCF9F0125 /* Pods */,
+				849269CEFFFBD7A8410E37CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +131,14 @@
 		2B5BC80321CB8245007C34DF /* SeePal */ = {
 			isa = PBXGroup;
 			children = (
+				2B98966421EB42030051C2DD /* Utils */,
+				2B98965D21EA143C0051C2DD /* Extensions */,
+				2B98965521E9E1050051C2DD /* View */,
+				2B1D4C1A21D89348009F1E53 /* Coordinators */,
+				2B5BC83D21CCA94D007C34DF /* Model */,
 				2B5BC80421CB8245007C34DF /* AppDelegate.swift */,
 				2B5BC80621CB8245007C34DF /* DocumentBrowserViewController.swift */,
 				2B5BC80821CB8245007C34DF /* DocumentViewController.swift */,
-				2B5BC80A21CB8245007C34DF /* Document.swift */,
 				2B5BC80C21CB8245007C34DF /* Main.storyboard */,
 				2B5BC80F21CB8246007C34DF /* Assets.xcassets */,
 				2B5BC81121CB8246007C34DF /* LaunchScreen.storyboard */,
@@ -131,6 +165,59 @@
 			path = SeePalUITests;
 			sourceTree = "<group>";
 		};
+		2B5BC83D21CCA94D007C34DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B5BC83E21CCA94D007C34DF /* DocumentFactory.swift */,
+				2B5BC80A21CB8245007C34DF /* Document.swift */,
+				2B98965621E9E6EE0051C2DD /* CompressedDocument.swift */,
+				2B98965B21E9F1140051C2DD /* Page.swift */,
+				2B98966221EA2CBF0051C2DD /* PageData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B98965521E9E1050051C2DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B98965E21EA14870051C2DD /* DocumentView.swift */,
+				2B98966021EA1BC90051C2DD /* PageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B98965D21EA143C0051C2DD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2B98966421EB42030051C2DD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B98966521EB42110051C2DD /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		849269CEFFFBD7A8410E37CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B1D4C1721D890BC009F1E53 /* Pods_SeePal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E10172AECC1D797BCF9F0125 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E941D7B0C2EA41A3F85BC9C /* Pods-SeePal.debug.xcconfig */,
+				B6DC151563F1F8A1C1310B62 /* Pods-SeePal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B5BC82D21CB8246007C34DF /* Build configuration list for PBXNativeTarget "SeePal" */;
 			buildPhases = (
+				D179DD3A748E6250898B1B2F /* [CP] Check Pods Manifest.lock */,
 				2B5BC7FD21CB8245007C34DF /* Sources */,
 				2B5BC7FE21CB8245007C34DF /* Frameworks */,
 				2B5BC7FF21CB8245007C34DF /* Resources */,
+				F07BED91B5D162B0F72DECCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,15 +346,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D179DD3A748E6250898B1B2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SeePal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F07BED91B5D162B0F72DECCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SeePal/Pods-SeePal-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/UIImageViewAlignedSwift/UIImageViewAlignedSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ZIPFoundation/ZIPFoundation.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageViewAlignedSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZIPFoundation.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SeePal/Pods-SeePal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B5BC7FD21CB8245007C34DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B5BC80B21CB8245007C34DF /* Document.swift in Sources */,
 				2B5BC80921CB8245007C34DF /* DocumentViewController.swift in Sources */,
+				2B5BC83F21CCA94D007C34DF /* DocumentFactory.swift in Sources */,
+				2B98966321EA2CBF0051C2DD /* PageData.swift in Sources */,
+				2B98965821E9E8520051C2DD /* Document.swift in Sources */,
 				2B5BC80721CB8245007C34DF /* DocumentBrowserViewController.swift in Sources */,
+				2B98965C21E9F1140051C2DD /* Page.swift in Sources */,
 				2B5BC80521CB8245007C34DF /* AppDelegate.swift in Sources */,
+				2B98966621EB42110051C2DD /* Utils.swift in Sources */,
+				2B98965721E9E6EE0051C2DD /* CompressedDocument.swift in Sources */,
+				2B98966121EA1BC90051C2DD /* PageView.swift in Sources */,
+				2B98965F21EA14870051C2DD /* DocumentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,11 +585,21 @@
 		};
 		2B5BC82E21CB8246007C34DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E941D7B0C2EA41A3F85BC9C /* Pods-SeePal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CUBVJ84P3Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxAtomic\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/rx-coordinator\"",
+					"\"$(SRCROOT)/\"/**",
+				);
 				INFOPLIST_FILE = SeePal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,11 +613,21 @@
 		};
 		2B5BC82F21CB8246007C34DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6DC151563F1F8A1C1310B62 /* Pods-SeePal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CUBVJ84P3Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxAtomic\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/rx-coordinator\"",
+					"\"$(SRCROOT)/\"/**",
+				);
 				INFOPLIST_FILE = SeePal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

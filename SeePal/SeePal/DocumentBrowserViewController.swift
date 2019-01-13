@@ -16,11 +16,11 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         
         delegate = self
         
-        allowsDocumentCreation = true
+        allowsDocumentCreation = false
         allowsPickingMultipleItems = false
         
         // Update the style of the UIDocumentBrowserViewController
-        // browserUserInterfaceStyle = .dark
+        browserUserInterfaceStyle = .dark
         // view.tintColor = .white
         
         // Specify the allowed content types of your application via the Info.plist.
@@ -66,7 +66,7 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let documentViewController = storyBoard.instantiateViewController(withIdentifier: "DocumentViewController") as! DocumentViewController
-        documentViewController.document = Document(fileURL: documentURL)
+        documentViewController.document = DocumentFactory.create(documentURL)
         
         present(documentViewController, animated: true, completion: nil)
     }
