@@ -24,7 +24,7 @@ class DocumentView: UIScrollView {
         delegate = self
         maximumZoomScale = 32.0
         translatesAutoresizingMaskIntoConstraints = false
-        isPagingEnabled = false
+        isPagingEnabled = true
         
         let w = self.bounds.size.width
         let h = self.bounds.size.height
@@ -49,6 +49,9 @@ class DocumentView: UIScrollView {
         addSubview(containView)
         
         superView.addSubview(self)
+        DispatchQueue.main.async {
+            self.zoomScale = 1.0
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
