@@ -24,6 +24,8 @@
 		2B98966121EA1BC90051C2DD /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98966021EA1BC90051C2DD /* PageView.swift */; };
 		2B98966321EA2CBF0051C2DD /* PageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98966221EA2CBF0051C2DD /* PageData.swift */; };
 		2B98966621EB42110051C2DD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98966521EB42110051C2DD /* Utils.swift */; };
+		2BE8BB4C21EF73930065E9CA /* PDFDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE8BB4B21EF73930065E9CA /* PDFDocument.swift */; };
+		2BE8BB5321EF778F0065E9CA /* PDFPageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE8BB5221EF778F0065E9CA /* PDFPageData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,10 @@
 		2B98966021EA1BC90051C2DD /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		2B98966221EA2CBF0051C2DD /* PageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageData.swift; sourceTree = "<group>"; };
 		2B98966521EB42110051C2DD /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2BE8BB4921EB7AC10065E9CA /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2BE8BB4A21EB7AC10065E9CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2BE8BB4B21EF73930065E9CA /* PDFDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocument.swift; sourceTree = "<group>"; };
+		2BE8BB5221EF778F0065E9CA /* PDFPageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPageData.swift; sourceTree = "<group>"; };
 		8E941D7B0C2EA41A3F85BC9C /* Pods-SeePal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeePal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeePal/Pods-SeePal.debug.xcconfig"; sourceTree = "<group>"; };
 		B6DC151563F1F8A1C1310B62 /* Pods-SeePal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeePal.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeePal/Pods-SeePal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +114,8 @@
 		2B5BC7F821CB8245007C34DF = {
 			isa = PBXGroup;
 			children = (
+				2BE8BB4921EB7AC10065E9CA /* LICENSE */,
+				2BE8BB4A21EB7AC10065E9CA /* README.md */,
 				2B1D4C1921D892AB009F1E53 /* Podfile */,
 				2B5BC80321CB8245007C34DF /* SeePal */,
 				2B5BC81C21CB8246007C34DF /* SeePalTests */,
@@ -171,8 +179,10 @@
 				2B5BC83E21CCA94D007C34DF /* DocumentFactory.swift */,
 				2B5BC80A21CB8245007C34DF /* Document.swift */,
 				2B98965621E9E6EE0051C2DD /* CompressedDocument.swift */,
+				2BE8BB4B21EF73930065E9CA /* PDFDocument.swift */,
 				2B98965B21E9F1140051C2DD /* Page.swift */,
 				2B98966221EA2CBF0051C2DD /* PageData.swift */,
+				2BE8BB5221EF778F0065E9CA /* PDFPageData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,9 +413,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B5BC80921CB8245007C34DF /* DocumentViewController.swift in Sources */,
+				2BE8BB4C21EF73930065E9CA /* PDFDocument.swift in Sources */,
 				2B5BC83F21CCA94D007C34DF /* DocumentFactory.swift in Sources */,
 				2B98966321EA2CBF0051C2DD /* PageData.swift in Sources */,
 				2B98965821E9E8520051C2DD /* Document.swift in Sources */,
+				2BE8BB5321EF778F0065E9CA /* PDFPageData.swift in Sources */,
 				2B5BC80721CB8245007C34DF /* DocumentBrowserViewController.swift in Sources */,
 				2B98965C21E9F1140051C2DD /* Page.swift in Sources */,
 				2B5BC80521CB8245007C34DF /* AppDelegate.swift in Sources */,

@@ -16,7 +16,7 @@ class DocumentFactory {
         case media
     }
 
-    static let extToTypes = [ "zip" : DocumentType.compressed, "cbz" : DocumentType.compressed ]
+    static let extToTypes = [ "zip" : DocumentType.compressed, "cbz" : DocumentType.compressed, "pdf" : DocumentType.pdf, "mp3" : DocumentType.media ]
 
     class func create(_ url:URL) -> Document? {
         let ext = url.pathExtension.lowercased()
@@ -25,6 +25,8 @@ class DocumentFactory {
         }
         
         switch type {
+        case .pdf:
+            return PDFDocument(fileURL: url)
         case .compressed:
             return CompressedDocument(fileURL: url)
         default:

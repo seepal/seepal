@@ -97,22 +97,6 @@ class DocumentView: UIScrollView {
             return ps.count > 0
         })
 
-        let minpno = pages.first?.no ?? 0
-        let maxpno = pages.last?.no ?? 0
-        if minpno != 0 && maxpno != 0 {
-            let rpvs = containView.subviews.filter({ (v) -> Bool in
-                let pv = v as! PageView
-                return pv.page.no < minpno || pv.page.no > maxpno
-            })
-            for v in rpvs {
-                v.removeFromSuperview()
-                let pv = v as! PageView
-                pv.image = nil
-                dequeueReusablePageView.append(pv)
-                print("to reuse dequeue \(v)")
-            }
-        }
-
         for page in pages {
             var pv = pvs.filter({ (v) -> Bool in
                 return v.tag == page.no
@@ -129,6 +113,22 @@ class DocumentView: UIScrollView {
                 }
             }
             pv?.display()
+        }
+        
+        let minpno = pages.first?.no ?? 0
+        let maxpno = pages.last?.no ?? 0
+        if minpno != 0 && maxpno != 0 {
+            let rpvs = containView.subviews.filter({ (v) -> Bool in
+                let pv = v as! PageView
+                return pv.page.no < minpno || pv.page.no > maxpno
+            })
+            for v in rpvs {
+                v.removeFromSuperview()
+                let pv = v as! PageView
+                pv.image = nil
+                dequeueReusablePageView.append(pv)
+                print("to reuse dequeue \(v)")
+            }
         }
     }
     

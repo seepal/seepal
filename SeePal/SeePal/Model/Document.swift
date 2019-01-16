@@ -9,7 +9,7 @@
 import UIKit
 
 class Document: UIDocument {
-    public var isHorizontalScroll: Bool = false
+    public var isHorizontalScroll: Bool = true
 
     var count:Int {
         get {

@@ -17,6 +17,7 @@ class PageView: UIImageViewAligned {
         super.init(frame: page.frame)
         self.page = page
         self.tag = page.no
+        contentMode = .scaleAspectFit
         
         superView.addSubview(self)
     }
